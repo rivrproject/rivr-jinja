@@ -1,6 +1,8 @@
 rivr-jinja
 ==========
 
+[![Build Status](http://img.shields.io/travis/rivrproject/rivr-jinja/master.svg?style=flat)](https://travis-ci.org/rivrproject/rivr-jinja)
+
 An extension to rivr for using the Jinja template engine.
 
 ## Installation
