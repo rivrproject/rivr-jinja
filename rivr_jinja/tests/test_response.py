@@ -12,7 +12,7 @@ class JinjaResponseTests(unittest.TestCase):
     def test_rendering_content_with_environment(self):
         environment = Environment(loader=DictLoader({'index.html': 'Hello {{ name }}'}))
         response = JinjaResponse(request=None,
-                                 template_name='index.html',
+                                 template_names=['index.html'],
                                  context={'name': 'World'},
                                  environment=environment)
 
