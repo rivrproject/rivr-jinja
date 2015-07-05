@@ -5,6 +5,7 @@ from rivr_jinja.response import JinjaResponse
 class JinjaMixin(object):
     template_name = None
     response_class = JinjaResponse
+    environment = None
 
     def get_template_names(self):
         """
@@ -23,7 +24,7 @@ class JinjaMixin(object):
 
     def render_to_response(self, context):
         return self.response_class(self.request, self.get_template_names(),
-                                   context)
+                                   context, environment=self.environment)
 
 
 class JinjaView(View, JinjaMixin):
