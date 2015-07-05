@@ -60,7 +60,7 @@ middleware = JinjaMiddleware(environment)
 ### Response
 
 ```python
-JinjaResponse(request, template_name='index.html', context={'name': 'World'})
+JinjaResponse(request, template_names=['index.html'], context={'name': 'World'})
 ```
 
 ## License
