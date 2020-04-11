@@ -1,4 +1,4 @@
-from rivr.http import Response
+from rivr.response import Response
 
 
 class JinjaResponse(Response):

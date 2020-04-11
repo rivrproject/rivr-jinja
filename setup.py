@@ -9,7 +9,7 @@ setup(
     url='https://github.com/rivrproject/rivr-jinja',
     packages=find_packages(),
     install_requires=[
-        'rivr',
+        'rivr>=0.7.0',
         'Jinja2'
     ],
     author='Kyle Fuller',
