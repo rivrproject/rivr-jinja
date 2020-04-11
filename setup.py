@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='rivr-jinja',
-    version='0.2.0',
+    version='0.3.0',
     description='rivr integration for using the Jinja template engine.',
     url='https://github.com/rivrproject/rivr-jinja',
     packages=find_packages(),
