@@ -7,7 +7,8 @@ from rivr_jinja.response import JinjaResponse
 class JinjaResponseTests(unittest.TestCase):
     def test_rendering_content_without_environment_raises(self):
         response = JinjaResponse(None, 'index.html', {})
-        self.assertRaises(response.get_content)
+        with self.assertRaises(Exception):
+            response.get_content()
 
     def test_rendering_content_with_environment(self):
         environment = Environment(loader=DictLoader({'index.html': 'Hello {{ name }}'}))

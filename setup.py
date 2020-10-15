@@ -9,19 +9,18 @@ setup(
     url='https://github.com/rivrproject/rivr-jinja',
     packages=find_packages(),
     install_requires=[
-        'rivr>=0.7.0',
+        'rivr@git+https://github.com/rivrproject/rivr.git',
         'Jinja2'
     ],
     author='Kyle Fuller',
-    author_email='inbox@kylefuller.co.uk',
+    author_email='kyle@fuller.li',
     license='BSD',
     classifiers=(
-      'Programming Language :: Python :: 2',
-      'Programming Language :: Python :: 2.7',
       'Programming Language :: Python :: 3',
-      'Programming Language :: Python :: 3.2',
-      'Programming Language :: Python :: 3.3',
-      'Programming Language :: Python :: 3.4',
+      'Programming Language :: Python :: 3.6',
+      'Programming Language :: Python :: 3.7',
+      'Programming Language :: Python :: 3.8',
+      'Programming Language :: Python :: 3.9',
       'License :: OSI Approved :: BSD License',
     )
 )
