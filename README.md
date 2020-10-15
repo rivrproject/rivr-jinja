@@ -1,8 +1,6 @@
 rivr-jinja
 ==========
 
-[![Build Status](http://img.shields.io/travis/rivrproject/rivr-jinja/master.svg?style=flat)](https://travis-ci.org/rivrproject/rivr-jinja)
-
 An extension to rivr for using the Jinja template engine.
 
 ## Installation
@@ -66,4 +64,3 @@ JinjaResponse(request, template_names=['index.html'], context={'name': 'World'})
 ## License
 
 rivr-jinja is released under the BSD license. See [LICENSE](LICENSE).
-
