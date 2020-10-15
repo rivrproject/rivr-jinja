@@ -17,14 +17,20 @@ class JinjaMixin(object):
         """
 
         if self.template_name is None:
-            raise Exception("TemplateResponseMixin requires either a"
-                            "definition of 'template_name' or a"
-                            "implementation of 'get_template_names()'")
+            raise Exception(
+                "TemplateResponseMixin requires either a"
+                "definition of 'template_name' or a"
+                "implementation of 'get_template_names()'"
+            )
         return [self.template_name]
 
     def render_to_response(self, context):
-        return self.response_class(self.request, self.get_template_names(),
-                                   context, environment=self.environment)
+        return self.response_class(
+            self.request,
+            self.get_template_names(),
+            context,
+            environment=self.environment,
+        )
 
 
 class JinjaView(View, JinjaMixin):
@@ -38,4 +44,3 @@ class JinjaView(View, JinjaMixin):
     def get(self, request, *args, **kwargs):
         context = self.get_context_data(**kwargs)
         return self.render_to_response(context)
-

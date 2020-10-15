@@ -14,4 +14,3 @@ class JinjaMiddlewareTests(unittest.TestCase):
         middleware.process_response(None, response)
 
         self.assertEqual(response.environment, environment)
-
