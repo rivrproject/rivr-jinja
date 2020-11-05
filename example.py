@@ -8,9 +8,7 @@ class View(JinjaView):
     template_name = 'index.html'
 
     def get_context_data(self):
-        return {
-            'name': 'World'
-        }
+        return {'name': 'World'}
 
 
 if __name__ == '__main__':
@@ -18,4 +16,3 @@ if __name__ == '__main__':
     environment = Environment(loader=loader)
 
     rivr.serve(JinjaMiddleware.wrap(View.as_view(), environment))
-

@@ -1,13 +1,16 @@
+from typing import List, Optional
+
 from rivr.views import View
+
 from rivr_jinja.response import JinjaResponse
 
 
 class JinjaMixin(object):
-    template_name = None
+    template_name: Optional[str] = None
     response_class = JinjaResponse
     environment = None
 
-    def get_template_names(self):
+    def get_template_names(self) -> List[str]:
         """
         This method will be called to get the template to be rendered, by
         default we will try self.template_name.

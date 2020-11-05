@@ -1,8 +1,9 @@
 import unittest
+
 from jinja2 import Environment
 
-from rivr_jinja.response import JinjaResponse
 from rivr_jinja.middleware import JinjaMiddleware
+from rivr_jinja.response import JinjaResponse
 
 
 class JinjaMiddlewareTests(unittest.TestCase):

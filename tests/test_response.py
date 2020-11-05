@@ -1,14 +1,17 @@
 import unittest
-from jinja2 import Environment, DictLoader
+
+from jinja2 import DictLoader, Environment
 from rivr.http import Request
+
 from rivr_jinja.response import JinjaResponse
 
 
 class JinjaResponseTests(unittest.TestCase):
     def test_rendering_content_without_environment_raises(self):
         response = JinjaResponse(None, 'index.html', {})
+
         with self.assertRaises(Exception):
-            response.get_content()
+            response.content
 
     def test_rendering_content_with_environment(self):
         environment = Environment(loader=DictLoader({'index.html': 'Hello {{ name }}'}))
@@ -19,4 +22,4 @@ class JinjaResponseTests(unittest.TestCase):
             environment=environment,
         )
 
-        self.assertEqual(response.content, 'Hello World')
+        self.assertEqual(response.content, b'Hello World')
